@@ -13,10 +13,12 @@
   "author": "ivan",
   "license": "ISC",
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.19.0",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
