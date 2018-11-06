@@ -1,13 +1,17 @@
+import { reducer } from "./modules/tasks/reducer";
+import TaskList from './modules/tasks/TaskList';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from "./test";
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const store = createStore(
+	reducer,
+);
 
 ReactDOM.render(
-	<Test text={'Hello!'}
-		tasks= {[
-			{text: 'life is good', completed: false},
-			{text: 'life is great', completed: true},
-			{text: 'life with snowboard', completed: false},
-		]}/>,
-	document.getElementById('content')
+	<Provider store={store}>
+		<TaskList text="My task list:" />
+	</Provider>,
+		document.getElementById('content')
 );
